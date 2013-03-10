@@ -1,3 +1,16 @@
+<div class = "span12">
+<div class = "span3">
+  <div itemprop="description" data-hook="description" class="span3">
+      <%= raw(@product.description.gsub(/(.*?)\r?\n\r?\n/m, '<p>\1</p>')).truncate(100) rescue t(:product_has_no_description) %>
+  </div>
+  <div class = "span3" style = "width : 10%">
+    <%= product_image(@product, :itemprop => "image") %>
+  </div>
+  
+</div>
+
+
+
 <%= form_for review, :url => product_reviews_path(product), :html => {:method => :post} do |f| %>
   <%= render "spree/shared/error_messages", :target => review %>
 
