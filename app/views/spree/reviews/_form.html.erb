@@ -13,12 +13,12 @@
   <%= render "spree/shared/error_messages", :target => review %>
 
   <p class="review_rating_field">
-    <%= f.label :rating %> <span class="required">*</span><br />
+    <%= f.label :rating %> 
     <%= render :partial => "spree/reviews/stars", :locals => {:stars => review.rating, :edit_enabled => true} %>
   </p>
 
   <p class="review_name_field">
-    <%#= f.label :name %> <span class="required">*</span><br />
+    <%#= f.label :name %> 
     <%= f.text_field :name, :maxlength => "255", :size => "50" , :placeholder => "Name" %>
   </p>
 
